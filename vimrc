@@ -1,10 +1,18 @@
+" Install plugins as first thing
 source ~/vimrc/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect('~/vimrc/{}')
 
-set guifont=New-Heterodox-Mono.otf:h18
+" Appearance
 set encoding=utf-8
+set guifont=New-Heterodox-Mono.otf:h18
+set laststatus=2
+colorscheme darknord
 
+" Global keybindings
 let mapleader = ' '
 inoremap kj <Esc>
-
-colorscheme darknord
+vnoremap kj <Esc>
+nnoremap <Leader>wh <C-w>h
+nnoremap <Leader>wj <C-w>j
+nnoremap <Leader>wk <C-w>k
+nnoremap <Leader>wl <C-w>l
