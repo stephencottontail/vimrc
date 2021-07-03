@@ -3,7 +3,6 @@ source ~/vimrc/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect('~/vimrc/{}')
 
 " Appearance
-set runtimepath+=~/vimrc
 set encoding=utf-8
 set guifont=New-Heterodox-Mono.otf:h18
 set laststatus=2

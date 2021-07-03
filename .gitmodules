@@ -5,3 +5,6 @@
 	path = vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
 [submodule "vim-devicons"]
+[submodule "vim-colors"]
+	path = vim-colors
+	url = git@github.com:stephencottontail/vim-colors.git
