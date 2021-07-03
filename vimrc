@@ -17,3 +17,12 @@ nnoremap <Leader>wh <C-w>h
 nnoremap <Leader>wj <C-w>j
 nnoremap <Leader>wk <C-w>k
 nnoremap <Leader>wl <C-w>l
+
+function! SynStack()
+	if !exists("*synstack")
+		return
+	endif
+	let l:s = synID(line('.'), col('.'), 1)  
+	echo synIDattr(synIDtrans(l:s), 'name') . ' -> ' . synIDattr(l:s, 'name') 
+endfunc
+nnoremap <Leader>s :call SynStack()<CR>
