@@ -8,3 +8,9 @@
 [submodule "vim-colors"]
 	path = vim-colors
 	url = git@github.com:stephencottontail/vim-colors.git
+[submodule "vim-javascript"]
+	path = vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "vim-jsx-pretty"]
+	path = vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty
