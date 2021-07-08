@@ -1,8 +1,18 @@
 " Install plugins as first thing
-source ~/vimrc/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect('~/vimrc/{}')
+if has('iVim')
+	source ~/vimrc/vim-pathogen/autoload/pathogen.vim
+	execute pathogen#infect('~/vimrc/{}')
+endif
+
+if has('nvim')
+	source ~/.config/vimrc/vim-pathogen/autoload/pathogen.vim
+	execute pathogen#infect('~/.config/vimrc/{}')
+endif
 
 " Appearance
+if has('nvim')
+	set termguicolors
+endif
 set encoding=utf-8
 set guifont=New-Heterodox-Mono.otf:h18
 set laststatus=2
