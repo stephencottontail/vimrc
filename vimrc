@@ -9,13 +9,16 @@ if has('nvim')
 	execute pathogen#infect('~/.config/vimrc/{}')
 endif
 
-" Appearance
+" Look and feel
 if has('nvim')
 	set termguicolors
 endif
 set encoding=utf-8
 set guifont=New-Heterodox-Mono.otf:h18
 set laststatus=2
+set tabstop=4
+set shiftwidth=4
+set wildignore+=*/node_modules/*
 colorscheme darknord
 
 " Global keybindings
@@ -35,3 +38,9 @@ function! SynStack()
 	echo synIDattr(synIDtrans(l:s), 'name') . ' -> ' . synIDattr(l:s, 'name') 
 endfunc
 nnoremap <Leader>s :call SynStack()<CR>
+
+" Neovim LSP config
+if has('nvim')
+	autocmd FileType javascript,javascriptreact,typescript,typescriptreact * 
+	source ~/.config/vimrc/lua/lsp.lua 
+endif

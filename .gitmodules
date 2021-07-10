@@ -14,3 +14,6 @@
 [submodule "vim-jsx-pretty"]
 	path = vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty
+[submodule "nvim-lspconfig"]
+	path = nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig
