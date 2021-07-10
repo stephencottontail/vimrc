@@ -17,3 +17,6 @@
 [submodule "nvim-lspconfig"]
 	path = nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
+[submodule "diagnostic-languageserver"]
+	path = diagnostic-languageserver
+	url = git@github.com:iamcco/diagnostic-languageserver.git
