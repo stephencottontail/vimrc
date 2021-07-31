@@ -19,6 +19,7 @@ set laststatus=2
 set tabstop=4
 set shiftwidth=4
 set wildignore+=*/node_modules/*
+set hidden
 colorscheme darknord
 
 " Global keybindings
@@ -29,6 +30,8 @@ nnoremap <Leader>wh <C-w>h
 nnoremap <Leader>wj <C-w>j
 nnoremap <Leader>wk <C-w>k
 nnoremap <Leader>wl <C-w>l
+tnoremap kj <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>
 
 function! SynStack()
 	if !exists("*synstack")
