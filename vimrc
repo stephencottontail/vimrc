@@ -41,6 +41,9 @@ nnoremap <Leader>s :call SynStack()<CR>
 
 " Neovim LSP config
 if has('nvim')
-	autocmd FileType javascript,javascriptreact,typescript,typescriptreact * 
-	source ~/.config/vimrc/lua/lsp.lua 
+	function! LSP() abort
+		set runtimepath+=~/.config/vimrc
+		lua require'lsp'
+	endfunc
+	autocmd BufEnter *.js,*.jsx,*.ts,*.tsx,*.php call LSP()
 endif
