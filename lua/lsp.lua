@@ -55,22 +55,19 @@ require'lspconfig'.diagnosticls.setup{
 			typescriptreact = 'eslint',
 		},
 		formatters = {
-			prettierEslint = {
-				command = 'prettier-eslint',
-				args = { '--stdin' },
-				rootPatterns = { '.git' },
-			},
 			prettier = {
-				command = 'prettier',
-				args = { '--stdin-filepath', '%filename' }
-			}
+				command = './node_modules/.bin/prettier',
+				args = { '--stdin-filepath', '%filename' },
+				rootPatterns = { '.git' },
+				ignore = { '.git', 'node_modules/*' },
+			},
 		},
 		formatFiletypes = {
-			javascript = 'prettierEslint',
-			javascriptreact = 'prettierEslint',
+			javascript = 'prettier',
+			javascriptreact = 'prettier',
 			json = 'prettier',
-			typescript = 'prettierEslint',
-			typescriptreact = 'prettierEslint'
+			typescript = 'prettier',
+			typescriptreact = 'prettier'
 		},
 	},
 }

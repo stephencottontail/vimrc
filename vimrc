@@ -42,11 +42,20 @@ function! SynStack()
 endfunc
 nnoremap <Leader>s :call SynStack()<CR>
 
+" Neovim Lua config
+if has('nvim')
+	set runtimepath+=~/.config/vimrc
+endif
+
 " Neovim LSP config
 if has('nvim')
 	function! LSP() abort
-		set runtimepath+=~/.config/vimrc
 		lua require'lsp'
 	endfunc
-	autocmd BufEnter *.js,*.jsx,*.ts,*.tsx,*.php call LSP()
+	autocmd BufReadPost *.js,*.jsx,*.ts,*.tsx,*.php call LSP()
+endif
+
+" Neovim tree-siiter config
+if has('nvim')
+	lua require'treesitter'
 endif

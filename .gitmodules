@@ -20,3 +20,6 @@
 [submodule "diagnostic-languageserver"]
 	path = diagnostic-languageserver
 	url = git@github.com:iamcco/diagnostic-languageserver.git
+[submodule "nvim-treesitter"]
+	path = nvim-treesitter
+	url = git@github.com:nvim-treesitter/nvim-treesitter.git
