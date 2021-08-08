@@ -53,7 +53,7 @@ if has('nvim')
 		lua require'lsp'
 	endfunc
 	autocmd BufReadPost *.js,*.jsx,*.ts,*.tsx,*.php call LSP()
-	autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx lua vim.lsp.buf.formatting_seq_sync({order='diagnosticls'})
+	autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx lua vim.lsp.buf.formatting()
 endif
 
 " Neovim tree-sitter config

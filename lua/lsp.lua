@@ -18,7 +18,10 @@ require'lspconfig'.intelephense.setup{
 }
 
 require'lspconfig'.tsserver.setup{
-	on_attach = set_keybindings,
+	on_attach = function(client, bufnr)
+		client.resolved_capabilities.document_formatting = false
+		set_keybindings()
+	end,
 	handlers = {
 		["textDocument/publishDiagnostics"] = function() end,
 		["textDocument/formatting"] = function() end
