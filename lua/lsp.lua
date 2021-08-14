@@ -1,6 +1,11 @@
 local set_keybindings = function(client, buf)
 	vim.api.nvim_buf_set_keymap(buf, 'n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
 	vim.api.nvim_buf_set_keymap(buf, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(buf, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(buf, 'n', 'gq', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(buf, 'n', 'gl', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(buf, 'n', 'g[', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(buf, 'n', 'g]', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {noremap = true})
 	vim.api.nvim_buf_set_option(buf, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
 
