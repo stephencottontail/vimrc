@@ -23,3 +23,6 @@
 [submodule "nvim-treesitter"]
 	path = nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+[submodule "vim-graphql"]
+	path = vim-graphql
+	url = https://github.com/jparise/vim-graphql
