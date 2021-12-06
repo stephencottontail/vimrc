@@ -20,7 +20,7 @@ set tabstop=4
 set shiftwidth=4
 set wildignore+=*/node_modules/*
 set hidden
-colorscheme darknord
+colorscheme dracula
 
 " Global keybindings
 let mapleader = ' '

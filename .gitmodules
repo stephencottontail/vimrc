@@ -26,3 +26,6 @@
 [submodule "vim-graphql"]
 	path = vim-graphql
 	url = https://github.com/jparise/vim-graphql
+[submodule "vim-dracula"]
+	path = vim-dracula
+	url = git@github.com:stephencottontail/vim-dracula.git
