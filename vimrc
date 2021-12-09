@@ -40,7 +40,7 @@ function! SynStack()
 	let l:s = synID(line('.'), col('.'), 1)  
 	echo synIDattr(synIDtrans(l:s), 'name') . ' -> ' . synIDattr(l:s, 'name') 
 endfunc
-nnoremap <Leader>s :call SynStack()<CR>
+nnoremap <Leader>S :call SynStack()<CR>
 
 " Neovim Lua config
 if has('nvim')
@@ -62,4 +62,5 @@ endif
 " Neovim tree-sitter config
 if has('nvim')
 	lua require'treesitter'
+	nnoremap <Leader>s :lua require'nvim-treesitter-playground.hl-info'.show_hl_captures()<CR>
 endif

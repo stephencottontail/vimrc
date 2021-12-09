@@ -29,3 +29,6 @@
 [submodule "vim-dracula"]
 	path = vim-dracula
 	url = git@github.com:stephencottontail/vim-dracula.git
+[submodule "playground"]
+	path = playground
+	url = https://github.com/nvim-treesitter/playground
