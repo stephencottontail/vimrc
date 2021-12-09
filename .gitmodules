@@ -32,3 +32,9 @@
 [submodule "playground"]
 	path = playground
 	url = https://github.com/nvim-treesitter/playground
+[submodule "plenary"]
+	path = plenary
+	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "gitsigns"]
+	path = gitsigns
+	url = https://github.com/lewis6991/gitsigns.nvim
