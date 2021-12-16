@@ -46,11 +46,6 @@ nnoremap <Leader>S :call SynStack()<CR>
 if has('nvim')
 	set runtimepath+=~/.config/vimrc
 
-	lua require'gitsigns'
-endif
-
-" Neovim LSP config
-if has('nvim')
 	function! LSP() abort
 		lua require'lsp'
 	endfunc
@@ -59,10 +54,7 @@ if has('nvim')
 		autocmd BufReadPost *.js,*.jsx,*.ts,*.tsx,*.php call LSP()
 		autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx lua vim.lsp.buf.formatting_sync(nil,500000)
 	augroup END
-endif
 
-" Neovim tree-sitter config
-if has('nvim')
+	lua require'gitsigns'
 	lua require'treesitter'
-	nnoremap <Leader>s :lua require'nvim-treesitter-playground.hl-info'.show_hl_captures()<CR>
 endif
