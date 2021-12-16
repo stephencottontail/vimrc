@@ -2,6 +2,7 @@ local set_keybindings = function(client, buf)
 	vim.api.nvim_buf_set_keymap(buf, 'n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
 	vim.api.nvim_buf_set_keymap(buf, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
 	vim.api.nvim_buf_set_keymap(buf, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(buf, 'n', 'gr', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true})
 	vim.api.nvim_buf_set_keymap(buf, 'n', 'gq', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', {noremap = true})
 	vim.api.nvim_buf_set_keymap(buf, 'n', 'gl', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', {noremap = true})
 	vim.api.nvim_buf_set_keymap(buf, 'n', 'g[', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', {noremap = true})
@@ -12,8 +13,8 @@ end
 require'lspconfig'.intelephense.setup{
 	on_attach = set_keybindings,
 	init_options = {
-		storagePath = '/home/pi/.cache/intelephense',
-		globalStoragePath = '/home/pi/.cache/intelephense'
+		storagePath = '/home/stephen/.cache/intelephense',
+		globalStoragePath = '/home/stephen/.cache/intelephense'
 	},
 	settings = {
 		intelephense = {
@@ -72,6 +73,7 @@ require'lspconfig'.diagnosticls.setup{
 				args = { '--stdin-filepath', '%filename' },
 				rootPatterns = { '.git' },
 				ignore = { '.git', 'node_modules/*' },
+				requiredFiles = { '.prettierrc' },
 			},
 		},
 		formatFiletypes = {
