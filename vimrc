@@ -45,6 +45,8 @@ nnoremap <Leader>S :call SynStack()<CR>
 " Neovim Lua config
 if has('nvim')
 	set runtimepath+=~/.config/vimrc
+
+	lua require'gitsigns'
 endif
 
 " Neovim LSP config
