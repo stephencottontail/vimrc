@@ -7,7 +7,7 @@
 [submodule "vim-devicons"]
 [submodule "vim-colors"]
 	path = vim-colors
-	url = git@github.com:stephencottontail/vim-colors.git
+	url = https://github.com/stephencottontail/vim-colors
 [submodule "vim-javascript"]
 	path = vim-javascript
 	url = https://github.com/pangloss/vim-javascript
@@ -19,16 +19,16 @@
 	url = https://github.com/neovim/nvim-lspconfig
 [submodule "diagnostic-languageserver"]
 	path = diagnostic-languageserver
-	url = git@github.com:iamcco/diagnostic-languageserver.git
+	url = https://github.com/iamcco/diagnostic-languageserver
 [submodule "nvim-treesitter"]
 	path = nvim-treesitter
-	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+	url = https://github.com/nvim-treesitter/nvim-treesitter
 [submodule "vim-graphql"]
 	path = vim-graphql
 	url = https://github.com/jparise/vim-graphql
 [submodule "vim-dracula"]
 	path = vim-dracula
-	url = git@github.com:stephencottontail/vim-dracula.git
+	url = https://github.com/stephencottontail/vim-dracula
 [submodule "playground"]
 	path = playground
 	url = https://github.com/nvim-treesitter/playground
