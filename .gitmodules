@@ -38,3 +38,6 @@
 [submodule "gitsigns"]
 	path = gitsigns
 	url = https://github.com/lewis6991/gitsigns.nvim
+[submodule "neomux"]
+	path = neomux
+	url = https://github.com/nikvdp/neomux
