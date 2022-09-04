@@ -5,8 +5,8 @@ if has('iVim')
 endif
 
 if has('nvim')
-	source ~/.config/vimrc/vim-pathogen/autoload/pathogen.vim
-	execute pathogen#infect('~/.config/vimrc/{}')
+	source ~/.config/nvim/vim-pathogen/autoload/pathogen.vim
+	execute pathogen#infect('~/.config/nvim/{}')
 endif
 
 " Look and feel
