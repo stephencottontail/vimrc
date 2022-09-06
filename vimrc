@@ -10,9 +10,6 @@ if has('nvim')
 endif
 
 " Look and feel
-if has('nvim')
-	set termguicolors
-endif
 set encoding=utf-8
 set guifont=New-Heterodox-Mono.otf:h18
 set laststatus=2
