@@ -42,6 +42,14 @@ function! SynStack()
 endfunc
 nnoremap <Leader>S :call SynStack()<CR>
 
+" Implement copy-paste between neovim on Pi and iPad
+augroup oscyank
+	autocmd!
+	autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '+' | execute 'OSCYankReg +' | endif
+augroup END
+
+set clipboard& clipboard^=unnamed,unnamedplus
+
 " Neovim Lua config
 if has('nvim')
 	set runtimepath+=~/.config/vimrc

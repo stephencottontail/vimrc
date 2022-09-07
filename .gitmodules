@@ -41,3 +41,6 @@
 [submodule "neomux"]
 	path = neomux
 	url = https://github.com/nikvdp/neomux
+[submodule "vim-oscyank"]
+	path = vim-oscyank
+	url = https://github.com/ojroques/vim-oscyank.git
