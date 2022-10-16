@@ -1,13 +1,13 @@
 local set_keybindings = function(client, buf)
-	vim.api.nvim_buf_set_keymap(buf, 'n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(buf, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(buf, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(buf, 'n', 'gr', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(buf, 'n', 'gq', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(buf, 'n', 'gl', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(buf, 'n', 'g[', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_keymap(buf, 'n', 'g]', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {noremap = true})
-	vim.api.nvim_buf_set_option(buf, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+	vim.api.nvim_buf_set_keymap(0, 'n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(0, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(0, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(0, 'n', 'gr', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(0, 'n', 'gq', '<cmd>lua vim.diagnostic.setloclist()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(0, 'n', 'gl', '<cmd>lua vim.diagnostic.open_float()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(0, 'n', 'g[', '<cmd>lua vim.diagnostic.goto_prev()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_keymap(0, 'n', 'g]', '<cmd>lua vim.diagnostic.goto_next()<CR>', {noremap = true})
+	vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
 
 require'lspconfig'.intelephense.setup{
@@ -25,7 +25,7 @@ require'lspconfig'.intelephense.setup{
 
 require'lspconfig'.tsserver.setup{
 	on_attach = function(client, bufnr)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.documentFormattingProvider = false
 		set_keybindings()
 	end,
 	handlers = {
@@ -70,10 +70,10 @@ require'lspconfig'.diagnosticls.setup{
 		formatters = {
 			prettier = {
 				command = './node_modules/.bin/prettier',
-				args = { '--stdin-filepath', '%filename' },
+				args = { '--stdin', '--stdin-filepath', '%filepath' },
 				rootPatterns = { '.git' },
 				ignore = { '.git', 'node_modules/*' },
-				requiredFiles = { '.prettierrc' },
+				requiredFiles = { '.prettierrc' }
 			},
 		},
 		formatFiletypes = {

@@ -57,9 +57,9 @@ if has('nvim')
 	augroup lsp
 		au!
 		autocmd BufReadPost *.js,*.jsx,*.ts,*.tsx,*.php call LSP()
-		autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx lua vim.lsp.buf.formatting_sync(nil,500000)
+		autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx lua vim.lsp.buf.format( { timeout_ms = 500000 } );
 	augroup END
 
 	lua require'gitsigns'
-	lua require'treesitter'
+	"lua require'treesitter'
 endif
