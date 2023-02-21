@@ -1,15 +1,9 @@
-[submodule "ctrlp.vim"]
-	path = ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule "vim-pathogen"]
 	path = vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
 [submodule "vim-colors"]
 	path = vim-colors
 	url = git@github.com/stephencottontail/vim-colors
-[submodule "vim-javascript"]
-	path = vim-javascript
-	url = https://github.com/pangloss/vim-javascript
 [submodule "vim-jsx-pretty"]
 	path = vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty
@@ -28,12 +22,6 @@
 [submodule "playground"]
 	path = playground
 	url = https://github.com/nvim-treesitter/playground
-[submodule "plenary"]
-	path = plenary
-	url = https://github.com/nvim-lua/plenary.nvim
-[submodule "gitsigns"]
-	path = gitsigns
-	url = https://github.com/lewis6991/gitsigns.nvim
 [submodule "neomux"]
 	path = neomux
 	url = https://github.com/nikvdp/neomux
