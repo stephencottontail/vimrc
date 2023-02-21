@@ -4,10 +4,9 @@
 [submodule "vim-pathogen"]
 	path = vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
-[submodule "vim-devicons"]
 [submodule "vim-colors"]
 	path = vim-colors
-	url = https://github.com/stephencottontail/vim-colors
+	url = git@github.com/stephencottontail/vim-colors
 [submodule "vim-javascript"]
 	path = vim-javascript
 	url = https://github.com/pangloss/vim-javascript
@@ -41,3 +40,6 @@
 [submodule "vim-oscyank"]
 	path = vim-oscyank
 	url = https://github.com/ojroques/vim-oscyank.git
+[submodule "nvim-conjure"]
+	path = nvim-conjure
+	url = git@github.com:Olical/conjure.git
