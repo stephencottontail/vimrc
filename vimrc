@@ -16,7 +16,9 @@ set laststatus=2
 set tabstop=4
 set shiftwidth=4
 set wildignore+=*/node_modules/*
-set hidden
+set path+=src/**,test/**
+set nohidden
+set notermguicolors
 colorscheme fourbit
 
 " Global keybindings
